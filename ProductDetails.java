@@ -2,7 +2,7 @@ public class ProductDetails{
 	
 	public static void main(String[] args)
 	{
-		/*String name="Laptop";
+		String name="Laptop";
 		int price=4000;
 		int discount=10;
 		String brandName="Dell";
@@ -27,11 +27,7 @@ public class ProductDetails{
 		System.out.println("platform Fee: "+platformFee);
 		System.out.println("Total Payable Amount: "+total);
 		System.out.println("Total amount without GST: "+(total-gstAmount));
-		System.out.println("Total Amount: "+total); */
-		if(10<20)
-		{
-			break;
-			System.out.println("Hello");
-		}
+		System.out.println("Total Amount: "+total); 
+		
 	}
 }
