@@ -1,37 +1,27 @@
 class ArrayAddition {
     public static void main(String[] args) {
-        int array[] = {0}; 
+        int array[] = {9,9,9}; 
         int n = array.length;
-        
-        for (int index = n - 1; index >= 0; index--) {
-            array[index] += 1; 
-
-            if (array[index] == 10) 
+        boolean carry=true;
+        for (int index = n - 1; index >= 0; index--)
+        {
+            if(carry)
             {
-                array[index] = 0; 
-                
-                if (index == 0)
-                 {
-                    int newArray[] = new int[n + 1];
-                    newArray[0] = 1; 
-                    System.out.print("{");
-                    for (int i = 0; i < newArray.length; i++)
-                     {
-                        System.out.print(newArray[i]);
-                        if (i < newArray.length - 1) 
-                        {
-                            System.out.print(", ");
-                        }
-                    }
-                    System.out.println("}");
-                    return; 
+                array[index]+=1;
+                if(array[index]==10)
+                {
+                    array[index]=0;
                 }
-            } 
-            else 
-                break;
+                else 
+                {
+                    carry=false;
+                }
+            }
         }
 
         System.out.print("{");
+        if(carry)
+            System.out.print("1, ");
         for (int i = 0; i < n; i++) {
             System.out.print(array[i]);
             if (i < n - 1) {
@@ -39,5 +29,8 @@ class ArrayAddition {
             }
         }
         System.out.println("}");
+
+
+        
     }
 }
